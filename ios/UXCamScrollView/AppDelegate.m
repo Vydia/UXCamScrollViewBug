@@ -11,11 +11,21 @@
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <UXCam/UXCam.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [UXCam startWithKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"UXCamApiKey"] appVariantIdentifier:nil completionBlock:^(BOOL started) {
+    if (started) {
+      NSLog(@"UXCam session started");
+    }
+    else {
+      NSLog(@"UXCam session did not start recording");
+    }
+  }];
+  
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
