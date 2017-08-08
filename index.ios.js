@@ -5,6 +5,7 @@ import UXCam from 'react-native-ux-cam';
 export default class UXCamScrollView extends Component {
 
   componentDidMount() {
+    // this will only work with a valid key!
     UXCam.startWithKey('YOUR KEY')
   }
 
