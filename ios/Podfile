@@ -1,0 +1,8 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'UXCamScrollView' do
+  platform :ios, '8.0'
+  pod "UXCam", "~> 2.5.8"
+
+end
