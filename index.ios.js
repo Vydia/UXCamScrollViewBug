@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, View, ScrollView, TouchableOpacity, Text } from 'react-native';
-//import UXCam from 'react-native-ux-cam';
+import UXCam from 'react-native-ux-cam';
 
 export default class UXCamScrollView extends Component {
 
   componentDidMount() {
-//    UXCam.startWithKey('YOUR KEY')
+    UXCam.startWithKey('YOUR KEY')
   }
 
   render() {
