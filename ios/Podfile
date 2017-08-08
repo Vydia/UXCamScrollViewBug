@@ -3,6 +3,6 @@
 
 target 'UXCamScrollView' do
   platform :ios, '8.0'
-  pod "UXCam", "~> 2.5.8"
+  pod "UXCam"
 
 end
